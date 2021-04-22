@@ -22,15 +22,15 @@ public class UserFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        TextView text = view.findViewById(R.id.editText);
-        TextView text2 = view.findViewById(R.id.editText2);
-        TextView text3 = view.findViewById(R.id.editText3);
-        TextView text4 = view.findViewById(R.id.editText4);
-        TextView text5 = view.findViewById(R.id.editText5);
-        TextView text6 = view.findViewById(R.id.editText6);
-        TextView text7 = view.findViewById(R.id.editText7);
-        TextView text8 = view.findViewById(R.id.editText8);
-        TextView text9 = view.findViewById(R.id.editText9);
+        TextView text = view.findViewById(R.id.editTextAccount);
+        TextView text2 = view.findViewById(R.id.editTextAge);
+        TextView text3 = view.findViewById(R.id.editTextCity);
+        TextView text4 = view.findViewById(R.id.editTextEmail);
+        TextView text5 = view.findViewById(R.id.editTextPassword);
+        TextView text6 = view.findViewById(R.id.editTextPasswordAgain);
+        TextView text7 = view.findViewById(R.id.editTextHeight);
+        TextView text8 = view.findViewById(R.id.editTextWeight);
+        TextView text9 = view.findViewById(R.id.editTextBirth);
 
         try {
             String[] arg = getArguments().getStringArray("userinfo");

@@ -8,14 +8,20 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.Patterns;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -46,8 +52,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        Settings settings = Settings.getInstance();
 
-
+        if (settings.getBLogin() == false) {
+            startActivity(new Intent(this, SignInActivity.class));
+        }
 
         if (savedInstanceState == null) {
             Fragment fragmentH = new HomeFragment();
@@ -101,6 +110,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new SeeExercisesFragment()).commit();
                 break;
+            case R.id.nav_logout:
+                //TYHJENNÄ KÄYTTÄJÄTIEDOT JA MERKITSE ETTÄ EI KÄYTTÄJÄÄ SISÄÄNKIRJAUTUNEENA
+                FirebaseAuth.getInstance().signOut();
+
+                startActivity(new Intent(this, SignInActivity.class));
+                break;
 
         }
         drawer.closeDrawer(GravityCompat.START);
@@ -118,47 +133,76 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     public void refreshUser(View view) {
-        TextView text = findViewById(R.id.editText);
-        TextView text2 = findViewById(R.id.editText2);
-        TextView text3 = findViewById(R.id.editText3);
-        TextView text4 = findViewById(R.id.editText4);
-        TextView text5 = findViewById(R.id.editText5);
-        TextView text6 = findViewById(R.id.editText6);
-        TextView text7 = findViewById(R.id.editText7);
-        TextView text8 = findViewById(R.id.editText8);
-        TextView text9 = findViewById(R.id.editText9);
-        TextView text10 = findViewById(R.id.textView10);
-        String sAccount = text.getText().toString();
-        int iAge = Integer.parseInt(text2.getText().toString());
-        String sTown = text3.getText().toString();
-        String sEmail = text4.getText().toString();
-        String sPassword = text5.getText().toString();
-        String sPasswordAgain = text6.getText().toString();
-        int iHeight = Integer.parseInt(text7.getText().toString());
-        float iWeight = Float.parseFloat(text8.getText().toString());
-        String sBirthday = text9.getText().toString();
+
+        EditText editTextAccount = findViewById(R.id.editTextAccount);
+        EditText editTextAge = findViewById(R.id.editTextAge);
+        EditText editTextCity = findViewById(R.id.editTextCity);
+        EditText editTextEmail = findViewById(R.id.editTextEmail);
+        EditText editTextPassword = findViewById(R.id.editTextPassword);
+        EditText editTextPasswordAgain = findViewById(R.id.editTextPasswordAgain);
+        EditText editTextHeight = findViewById(R.id.editTextHeight);
+        EditText editTextWeight = findViewById(R.id.editTextWeight);
+        EditText editTextBirth = findViewById(R.id.editTextBirth);
+        String sAccount = editTextAccount.getText().toString();
+        String sCity = editTextCity.getText().toString();
+        String sEmail = editTextEmail.getText().toString();
+        String sPassword = editTextPassword.getText().toString();
+        String sPasswordAgain = editTextPasswordAgain.getText().toString();
+        String sBirthday = editTextBirth.getText().toString();
+        boolean canUpdate = true;
 
         PasswordValid ps = new PasswordValid();
+        if (sAccount.equals("")) {
+            editTextAccount.setError("Käyttäjätunnus ei kelpaa");
+            canUpdate = false;
+        }
+        try {
+            int iAge = Integer.parseInt(editTextAge.getText().toString());
+        }catch (NumberFormatException e) {
+            editTextAccount.setError("Anna ikä numerona");
+            canUpdate = false;
+        }
+        if (sCity.equals("")) {
+            editTextCity.setError("Kaupunki ei kelpaa");
+            canUpdate = false;
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(sEmail).matches()) {
+            editTextEmail.setError("Sähköposti ei kelpaa");
+            canUpdate = false;
+        }
+        if (!ps.isValid(sPassword)) {
+            editTextPassword.setError("Salasana ei kelpaa");
+            canUpdate = false;
+        }
         if (!sPassword.equals(sPasswordAgain)) {
-            text10.setText("Salasanat eivät ole samanlaiset");
-        } else if (!ps.isValid(sPassword)) {
-            text10.setText("Salasana ei kelpaa");
-        }else if (sAccount.equals("")){
-            text10.setText("Käyttäjätunnus ei kelpaa");
-        }else if (sEmail.equals("")){
-            text10.setText("Sähköposti ei kelpaa");
-        }else if (sTown.equals("")){
-            text10.setText("Kaupunki ei kelpaa");
-        }else if (sBirthday.equals("")){
-            text10.setText("Syntymäaika ei kelpaa");
+            editTextPasswordAgain.setError("Salasanat eivät ole samanlaiset");
+            canUpdate = false;
+        }
+        try {
+            int iHeight = Integer.parseInt(editTextHeight.getText().toString());
+        }catch (NumberFormatException e) {
+            editTextHeight.setError("Anna pituus numerona");
+            canUpdate = false;
+        }
+        try {
+            float iWeight = Float.parseFloat(editTextWeight.getText().toString());
+        }catch (NumberFormatException e) {
+            editTextWeight.setError("Anna paino numerona");
+            canUpdate = false;
+        }
+
+        if (sBirthday.equals("")){
+            editTextBirth.setError("Syntymäaika ei kelpaa");
+            canUpdate = false;
         }
         else {
-
-            user.refreshUserinfo(text.getText().toString(), Integer.parseInt(text2.getText().toString()), text3.getText().toString(),
-                    text4.getText().toString(), text5.getText().toString(), Integer.parseInt(text7.getText().toString()),
-                    Float.parseFloat(text8.getText().toString()), text9.getText().toString());
-            userInfo = user.getList();
-            text10.setText("Tiedot päivitetty!");
+            if(canUpdate) {
+                user.refreshUserinfo(editTextAccount.getText().toString(), Integer.parseInt(editTextAge.getText().toString()), editTextCity.getText().toString(),
+                        editTextEmail.getText().toString(), editTextPassword.getText().toString(), Integer.parseInt(editTextHeight.getText().toString()),
+                        Float.parseFloat(editTextWeight.getText().toString()), editTextBirth.getText().toString());
+                userInfo = user.getList();
+                Toast.makeText(getApplicationContext(), "Tiedot päivitetty!", Toast.LENGTH_LONG).show();
+            }
         }
     }
 

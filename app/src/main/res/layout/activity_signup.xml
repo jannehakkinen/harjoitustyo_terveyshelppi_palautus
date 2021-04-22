@@ -1,84 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/harjoitustyo_background">
+
+    <TextView
+        android:id="@+id/textViewR"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+
+        android:text="Käyttäjätunnus"/>
+
+    <TextView
+        android:id="@+id/textView2R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Ikä"/>
+
+    <TextView
+        android:id="@+id/textView3R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="200dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Kaupunki"/>
+
+
+    <TextView
+        android:id="@+id/textView4R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Sähköposti"/>
+
+    <TextView
+        android:id="@+id/textView5R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="300dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Salasana"/>
+
+    <TextView
+        android:id="@+id/textView6R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="350dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Salasana uudelleen"/>
+
+    <TextView
+        android:id="@+id/textView7R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="400dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Pituus"/>
+
+    <TextView
+        android:id="@+id/textView8R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="450dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Paino"/>
+
+    <TextView
+        android:id="@+id/textView9R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="500dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Syntymäaika"/>
+    <TextView
+        android:id="@+id/textView10R"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="550dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
+        android:text="Sukupuoli"/>
+
 
     <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="wrap_content"
+        android:id="@+id/editTextAccountR"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginLeft="101dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginRight="101dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="200dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="textPersonName"
+        android:background="#40FFFFFF" />
 
     <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="wrap_content"
+        android:id="@+id/editTextAgeR"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginLeft="101dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="#40FFFFFF" />
+    <EditText
+        android:id="@+id/editTextCityR"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="#40FFFFFF" />
+    <EditText
+        android:id="@+id/editTextEmailR"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="#40FFFFFF"/>
+    <EditText
+        android:id="@+id/editTextPasswordR"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
-        app:layout_constraintVertical_bias="0.087" />
+        android:background="#40FFFFFF" />
+    <EditText
+        android:id="@+id/editTextPasswordAgainR"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="200dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="#40FFFFFF" />
+    <EditText
+        android:id="@+id/editTextHeightR"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="#40FFFFFF" />
+    <EditText
+        android:id="@+id/editTextWeightR"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="#40FFFFFF" />
+    <EditText
+        android:id="@+id/editTextBirthR"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="#40FFFFFF" />
+    <EditText
+        android:id="@+id/editTextSexR"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="#40FFFFFF" />
 
     <Button
         android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
+
         android:layout_marginLeft="161dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginRight="161dp"
-        android:layout_marginBottom="96dp"
-        android:text="Sign up"
-        app:layout_constraintBottom_toTopOf="@+id/backtosignin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginTop="580dp"
+
+        android:text="Luo käyttäjä"
+        app:backgroundTint="#534747"/>
 
     <Button
-        android:id="@+id/backtosignin"
+        android:id="@+id/buttonBackToSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already have an account? Sign in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="630dp"
+        android:text="Sinulla on jo käyttäjä? Kirjaudu"
+        app:backgroundTint="#534747"/>
 
     <ProgressBar
         android:id="@+id/progressbar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="200dp"
+        android:visibility="gone"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

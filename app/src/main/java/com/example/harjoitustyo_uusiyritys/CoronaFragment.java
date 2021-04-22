@@ -24,7 +24,6 @@ public class CoronaFragment extends Fragment implements View.OnClickListener{
         System.out.println("moi vesi");
 
         return inflater.inflate(R.layout.fragment_corona, container, false);
-
     }
 
     @Override

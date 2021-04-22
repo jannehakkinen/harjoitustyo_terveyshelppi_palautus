@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -25,9 +26,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_signin);
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
@@ -74,7 +77,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 if(task.isSuccessful()){
                     Intent intent = new Intent (SignInActivity.this, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
+                    Settings settings = Settings.getInstance();
+                    settings.setbLogin(true);
+                    finish();
+                    //startActivity(intent);
 
                 } else{
                     Toast toast = Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT);
