@@ -16,7 +16,7 @@ public class CoronaFragment extends Fragment implements View.OnClickListener{
     TextView textViewCorona;
     String sPrint = "";
     Button buttonCoronaUpdate;
-    String sDefaultPrint= "COVID-19 on maailmanlaajuinen pandemia, joka vaikuttaa eri ihmisiin eri tavoin. Koronaviruksen tavallisimpia oireita ovat kuume, kuiva yskä ja väsymys. Mikäli epäilet altistuneesi virukselle, ole välittömästi yhteydessä asuinkuntasi terveydenhuoltoon.\n\n";
+    String sDefaultPrint= "COVID-19 on maailmanlaajuinen pandemia, joka vaikuttaa eri ihmisiin eri tavoin. Koronaviruksen tavallisimpia oireita ovat kuume, kuiva yskä ja väsymys.\nMikäli epäilet altistuneesi virukselle, ole välittömästi yhteydessä asuinkuntasi terveydenhuoltoon.\n\n";
 
     @Nullable
     @Override

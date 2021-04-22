@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/harjoitustyo_background"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textViewDatePrint"
         android:layout_width="321dp"
         android:layout_height="wrap_content"
-
+        android:background="#40FFFFFF"
         android:layout_marginBottom="640dp"
         android:text="Pvm"
         android:textSize="30sp"
@@ -23,12 +24,14 @@
         android:layout_marginLeft="130dp"
         android:layout_marginTop="100dp"
         android:text="Valitse päivä"
-        android:visibility="visible" />
+        android:visibility="visible"
+        app:backgroundTint="#534747" />
 
     <Spinner
         android:id="@+id/spinnerChooseWorkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#40FFFFFF"
         android:layout_marginTop="170dp"
         android:layout_marginBottom="465dp" />
 
@@ -48,8 +51,8 @@
         android:id="@+id/EditTextDuration"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
-
-        android:layout_marginLeft="100dp"
+        android:background="#40FFFFFF"
+        android:layout_marginLeft="120dp"
         android:layout_marginTop="350dp"
 
         android:hint="Duration in minutes" />
@@ -62,7 +65,8 @@
         android:layout_marginLeft="120dp"
         android:layout_marginTop="550dp"
         android:text="Tallenna treeni"
-        android:visibility="visible" />
+        android:visibility="visible"
+        app:backgroundTint="#534747" />
 
     <TextView
         android:id="@+id/textViewExerciseDuration"

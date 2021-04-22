@@ -88,15 +88,20 @@ public class WaterFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        int iWaterGoal = Integer.parseInt(waterGoal.getText().toString());
+        try {
+            int iWaterGoal = Integer.parseInt(waterGoal.getText().toString());
 
-        WaterConsumption waterconsumption = new WaterConsumption();
-        if (waterUnit == 0){
-            float WaterAmountinL = waterAmount/4;
-            System.out.println(WaterAmountinL);
-            waterconsumption.addWaterToday(WaterAmountinL, iWaterGoal, textViewWater);
-        } else if(waterUnit == 1){
-            waterconsumption.addWaterToday(waterAmount, iWaterGoal, textViewWater);
+
+            WaterConsumption waterconsumption = new WaterConsumption();
+            if (waterUnit == 0) {
+                float WaterAmountinL = waterAmount / 4;
+                System.out.println(WaterAmountinL);
+                waterconsumption.addWaterToday(WaterAmountinL, iWaterGoal, textViewWater);
+            } else if (waterUnit == 1) {
+                waterconsumption.addWaterToday(waterAmount, iWaterGoal, textViewWater);
+            }
+        } catch (NumberFormatException e) {
+
         }
 
     }

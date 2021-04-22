@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/harjoitustyo_background"
     android:visibility="visible"
     tools:context=".MainActivity"
     tools:visibility="visible">
@@ -30,6 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:backgroundTint="#534747"
         tools:visibility="visible" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -38,6 +40,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="108dp"
         android:hint="Tavoite"
+        android:background="#40FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="128dp"
+        android:background="#40FFFFFF"
         android:text="Kuinka monta litraa yrität juoda päivässä?"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -57,6 +61,7 @@
         android:id="@+id/textView3"
         android:layout_width="270dp"
         android:layout_height="55dp"
+        android:background="#40FFFFFF"
         android:text="Kuinka paljon olet juonut? Ilmoita määrä litroissa tai laseissa (2.5dl)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,6 +74,7 @@
         android:id="@+id/textViewPrintWater"
         android:layout_width="262dp"
         android:layout_height="99dp"
+        android:background="#40FFFFFF"
         android:layout_marginBottom="124dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

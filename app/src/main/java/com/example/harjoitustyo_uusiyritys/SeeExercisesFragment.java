@@ -2,6 +2,7 @@ package com.example.harjoitustyo_uusiyritys;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,7 @@ public class SeeExercisesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         buttonExercise = (Button)view.findViewById(R.id.buttonExerciseHistory);
         textviewExercise = (TextView)view.findViewById(R.id.textViewExerciseHistory);
+        textviewExercise.setMovementMethod(new ScrollingMovementMethod());
         buttonExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -45,9 +45,9 @@ public class UserFragment extends Fragment {
             text8.setText(arg[6]);
             text9.setText(arg[7]);
 
-        } catch (Exception e) {
+        } catch (NullPointerException e) {
 
-            text.setText("ei argumenttejä");
+            text.setText("ei käyttäjätietoja");
         }
     }
 }

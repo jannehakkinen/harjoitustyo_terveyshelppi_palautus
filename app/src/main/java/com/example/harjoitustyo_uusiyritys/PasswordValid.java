@@ -4,14 +4,12 @@ public class PasswordValid {
     public static boolean isValid(String password) {
 
         if(password.length()<12) {
-            System.out.println("Lyhyt");
+            System.out.println("Liian lyhyt");
             return false;
-
         }
         if (password.contains(" ")) {
-            System.out.println("välilyönti");
+            System.out.println("Sisältää välilyönnin");
             return false;
-
         }
         if (true){
             int count = 0;
@@ -23,7 +21,7 @@ public class PasswordValid {
                 }
             }
             if (count == 0) {
-                System.out.println("ei numeroa");
+                System.out.println("Ei sisällä numeroa");
                 return false;
             }
         }
@@ -38,7 +36,7 @@ public class PasswordValid {
                 || password.contains(", ") || password.contains("<")
                 || password.contains(">") || password.contains("?")
                 || password.contains("|"))) {
-            System.out.println("ei erikoismerkkiä");
+            System.out.println("Ei sisällä erikoismerkkiä");
             return false;
         }
         if (true) {
@@ -56,7 +54,7 @@ public class PasswordValid {
                 }
             }
             if (count == 0) {
-                System.out.println("Ei isoa kirjainta");
+                System.out.println("Ei sisällä isoa kirjainta");
                 return false;
             }
         }
@@ -76,12 +74,12 @@ public class PasswordValid {
                 }
             }
             if (count == 0) {
-                System.out.println("Ei pientä kirjainta");
+                System.out.println("Ei sisällä pientä kirjainta");
                 return false;
             }
         }
 
-        // if all conditions fails
+        // if password is valid
         return true;
 
     }

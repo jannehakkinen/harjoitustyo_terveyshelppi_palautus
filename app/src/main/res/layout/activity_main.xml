@@ -18,7 +18,7 @@
                 android:layout_width="match_parent"
 
                 android:layout_height="?attr/actionBarSize"
-                android:background="#6000BCD4"
+                android:background="@color/cardview_dark_background"
                 android:elevation="4dp"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />

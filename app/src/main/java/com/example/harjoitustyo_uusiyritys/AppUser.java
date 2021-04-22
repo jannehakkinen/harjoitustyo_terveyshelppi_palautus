@@ -9,9 +9,10 @@ public class AppUser {
     private int iHeight;
     private float fWeight;
     private String sBirthday;
+    private boolean bMale;
 
     //If user does not want to change their weight, they are AppUser
-    public AppUser(String account, int age, String town, String email, String password, int height, float weight, String birthday) {
+    public AppUser(String account, int age, String town, String email, String password, int height, float weight, String birthday, boolean male) {
         sAccount = account;
         iAge = age;
         sTown = town;
@@ -20,6 +21,7 @@ public class AppUser {
         iHeight = height;
         fWeight = weight;
         sBirthday = birthday;
+        bMale = male;
     }
 
     public void refreshUserinfo(String account, int age, String town, String email, String password, int height, float weight, String birthday) {
@@ -33,7 +35,7 @@ public class AppUser {
         sBirthday = birthday;
     }
     public String[] getList() {
-        String[] array = {sAccount, Integer.toString(iAge), sTown, sEmail, sPassword, Integer.toString(iHeight), Float.toString(fWeight), sBirthday};
+        String[] array = {sAccount, Integer.toString(iAge), sTown, sEmail, sPassword, Integer.toString(iHeight), Float.toString(fWeight), sBirthday, Boolean.toString(bMale)};
         return array;
     }
 
@@ -61,6 +63,7 @@ public class AppUser {
     public String getsBirthday(){
         return sBirthday;
     }
+    public boolean getbMale() {return bMale; }
 
 
 }

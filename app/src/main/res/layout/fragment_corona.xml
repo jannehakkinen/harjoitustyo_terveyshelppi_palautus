@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@drawable/harjoitustyo_background">
 
     <TextView
         android:id="@+id/textViewKorona"
@@ -10,7 +11,8 @@
         android:layout_height="537dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="50dp"
-        android:background="#A93E4234" />
+        android:textSize="16dp"
+        android:background="#40FFFFFF" />
 
     <Button
         android:id="@+id/buttonGetCorona"
@@ -18,5 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="600dp"
-        android:text="Hae uusimmat koronatiedot" />
+        android:text="Hae uusimmat koronatiedot"
+        android:visibility="visible"
+        app:backgroundTint="#534747" />
 </FrameLayout>

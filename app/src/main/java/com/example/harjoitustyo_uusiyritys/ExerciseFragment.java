@@ -79,20 +79,22 @@ public class ExerciseFragment extends Fragment implements DatePickerDialog.OnDat
 
     }
     public void saveExercise(View v){
-        int iDuration = Integer.parseInt(durationInput.getText().toString());
+        try {
+            int iDuration = Integer.parseInt(durationInput.getText().toString());
 
-        int seekBarValue = seekBarExercise.getProgress();
-        Exercise exercise = new Exercise();
+            int seekBarValue = seekBarExercise.getProgress();
+            Exercise exercise = new Exercise();
 
-        if(iValue == 1){
-            exercise.insertAerobicExercise(iDuration, currentDateString, seekBarValue, context, userWeight);
-        }
-        else if(iValue == 2){
-            exercise.insertStrengthExercise(iDuration, currentDateString, seekBarValue, context, userWeight);
-        }
-        else if(iValue == 3){
-            System.out.println(iDuration + currentDateString + seekBarValue);
-            exercise.insertFlexibilityExercise(iDuration, currentDateString, seekBarValue, context, userWeight);
+            if (iValue == 1) {
+                exercise.insertAerobicExercise(iDuration, currentDateString, seekBarValue, context, userWeight);
+            } else if (iValue == 2) {
+                exercise.insertStrengthExercise(iDuration, currentDateString, seekBarValue, context, userWeight);
+            } else if (iValue == 3) {
+                System.out.println(iDuration + currentDateString + seekBarValue);
+                exercise.insertFlexibilityExercise(iDuration, currentDateString, seekBarValue, context, userWeight);
+
+            }
+        } catch (NumberFormatException e) {
 
         }
     }

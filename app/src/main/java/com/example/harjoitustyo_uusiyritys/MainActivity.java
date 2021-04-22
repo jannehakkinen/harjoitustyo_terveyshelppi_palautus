@@ -29,13 +29,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
 
-
-
-
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        user = new AppUser("lare66", 22, "LPR", "lare.pare", "bemmionAuto1!", 169, 120, "7.9.1999");
+        user = new AppUser("lare66", 22, "LPR", "lare.pare", "bemmionAuto1!", 169, 120, "7.9.1999", false);
         userInfo = user.getList();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -49,13 +46,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StartFragment()).commit();
+
+
 
         if (savedInstanceState == null) {
-
+            Fragment fragmentH = new HomeFragment();
+            Bundle bundleH = new Bundle();
+            bundleH.putStringArray("userinfoH", user.getList());
+            fragmentH.setArguments(bundleH);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_home);
+                    fragmentH).commit();
+
         }
 
 
@@ -65,8 +66,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
+                Fragment fragmentH = new HomeFragment();
+                Bundle bundleH = new Bundle();
+                bundleH.putStringArray("userinfoH", user.getList());
+                fragmentH.setArguments(bundleH);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HomeFragment()).commit();
+                        fragmentH).commit();
                 break;
             case R.id.nav_user:
                 Fragment fragment = new UserFragment();

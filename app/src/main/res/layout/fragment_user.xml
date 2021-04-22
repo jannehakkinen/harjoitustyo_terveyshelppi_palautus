@@ -1,179 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/harjoitustyo_background"
     >
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="100dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
 
         android:text="Käyttäjätunnus"/>
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="150dp"
-
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
         android:text="Ikä"/>
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="200dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
         android:text="Kaupunki"/>
+
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="250dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
         android:text="Sähköposti"/>
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="300dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
         android:text="Salasana"/>
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="350dp"
-
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
         android:text="Salasana uudelleen"/>
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="400dp"
-
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
         android:text="Pituus"/>
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="450dp"
-
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
         android:text="Paino"/>
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="30dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="500dp"
+        android:background="#40FFFFFF"
+        android:textSize="16dp"
         android:text="Syntymäaika"/>
 
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="10sp"/>
+        android:background="#40FFFFFF" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="150dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="10sp" />
+        android:background="#40FFFFFF" />
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="10sp"/>
+        android:background="#40FFFFFF" />
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
         android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="10sp"/>
+        android:background="#40FFFFFF"/>
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
         android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:background="#40FFFFFF"
         android:textSize="10sp"/>
     <EditText
         android:id="@+id/editText6"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="350dp"
         android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textSize="10sp"/>
+        android:background="#40FFFFFF" />
     <EditText
         android:id="@+id/editText7"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
         android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="10sp"/>
+        android:background="#40FFFFFF" />
     <EditText
         android:id="@+id/editText8"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="450dp"
         android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="10sp" />
+        android:background="#40FFFFFF" />
     <EditText
         android:id="@+id/editText9"
-        android:layout_width="198dp"
-        android:layout_height="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
         android:layout_marginLeft="200dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="10sp"/>
+        android:background="#40FFFFFF" />
 
     <Button
         android:id="@+id/button2"
@@ -182,7 +200,8 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="550dp"
         android:onClick="refreshUser"
-        android:text="Päivitä tiedot" />
+        android:text="Päivitä tiedot"
+        app:backgroundTint="#534747" />
 
 
 
@@ -192,6 +211,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="600dp"
+        android:background="#40FFFFFF"
         android:text="" />
 
 
