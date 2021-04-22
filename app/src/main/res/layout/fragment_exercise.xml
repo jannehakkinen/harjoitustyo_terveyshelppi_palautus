@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewDatePrint"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="640dp"
+        android:text="Pvm"
+        android:textSize="30sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonChooseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="100dp"
+        android:text="Valitse päivä"
+        android:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/spinnerChooseWorkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="465dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/EditTextDuration"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="350dp"
+
+        android:hint="Duration in minutes" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="550dp"
+        android:text="Tallenna treeni"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewExerciseDuration"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="350dp"
+
+        android:text="Treenin kesto:" />
+
+    <SeekBar
+        android:id="@+id/seekBarWorkout"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="500dp"
+        android:max="10"
+        android:min="0" />
+
+    <TextView
+        android:id="@+id/textViewEasyWorkOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="500dp"
+
+        android:text="Easy Workout" />
+
+    <TextView
+        android:id="@+id/textViewHardWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="500dp"
+        android:text="Hard Workout" />
+
+
+</RelativeLayout>

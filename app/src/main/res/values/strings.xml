@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">harjoitustyo_uusiyritys</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="WaterAmounts">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="WaterUnits">
+        <item>lasia (2.5dl)</item>
+        <item>litraa</item>
+    </string-array>
+
+    <string-array name="Workouts">
+        <item>Choose workout</item>
+        <item>Aerobic workout</item>
+        <item>Strength workout</item>
+        <item>Flexibility workout</item>
+    </string-array>
+
+</resources>

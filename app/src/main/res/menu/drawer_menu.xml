@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Koti"/>
+        <item android:id="@+id/nav_user"
+            android:icon="@drawable/ic_accountbox"
+            android:title="Profiili"/>
+        <item android:id="@+id/nav_excercise"
+            android:icon="@drawable/ic_excercise"
+            android:title="Lisää treeni"/>
+        <item android:id="@+id/nav_seeexercises"
+            android:icon="@drawable/ic_excercise"
+            android:title="Tarkastele treenihistoriaa"/>
+        <item android:id="@+id/nav_water"
+            android:icon="@drawable/ic_water"
+            android:title="Päivittäinen vedenjuonti"/>
+        <item android:id="@+id/nav_corona"
+            android:icon="@drawable/ic_coronavirus"
+            android:title="Covid-19 tilanne"/>
+
+
+    </group>
+
+
+</menu>
