@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment {
     String mBmi;
     View view;
     boolean bMale;
+    Settings settings;
 
 
     @Override
@@ -88,7 +89,6 @@ public class HomeFragment extends Fragment {
             }
         } catch (IOException | SAXException | ParserConfigurationException e) {
             e.printStackTrace();
-            System.out.println("Epäonnistui :(");
         }
         try {
             String[] arg = getArguments().getStringArray("userinfoH");
@@ -98,33 +98,25 @@ public class HomeFragment extends Fragment {
             fHeight = fHeight/100;
             fBmi = (fWeight/(fHeight * fHeight));
             dBmi = Math.round(fBmi * 100.0) / 100.0;
-            sText.setText("Sinun painoindeksisi on: " + dBmi );
-            if(bMale){
-                sText1.setText("Miesten keskiarvopainoindeksi on Suomessa: " + mBmi);
+            if(fHeight != 0) {
+
+                sText.setText("Sinun painoindeksisi on: " + dBmi);
+                if (bMale) {
+                    sText1.setText("Miesten keskiarvopainoindeksi on Suomessa: " + mBmi);
+                } else {
+                    sText1.setText("Naisten keskiarvopainoindeksi on Suomessa: " + wBmi);
+                }
             }else{
-                sText1.setText("Naisten keskiarvopainoindeksi on Suomessa: " + wBmi);
+                sText.setText("Käyttäjätietoja päivittämättä");
             }
 
             sText2.setText("Voisit mennä treenaamaan tänään! :)");
 
         }catch (NullPointerException e) {
-            sText.setText("Käyttäjätietoja ei saatavilla");
+
 
         }
 
-
-
-
-
-        //      if (user = woman)
-
-
-
-       /* if (user = man){
-            sText.setText("Your Body Mass Index: " + bmi );
-            sText1.setText("Average BMI for men in Finland is " + mBmi);
-
-        }*/
 
 
     }

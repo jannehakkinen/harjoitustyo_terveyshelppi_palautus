@@ -6,39 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/harjoitustyo_background">
 
-    <TextView
-        android:id="@+id/textViewR"
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="100dp"
-        android:background="#40FFFFFF"
-        android:textSize="16dp"
 
-        android:text="Käyttäjätunnus"/>
-
-    <TextView
-        android:id="@+id/textView2R"
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="150dp"
-        android:background="#40FFFFFF"
-        android:textSize="16dp"
-        android:text="Ikä"/>
-
-    <TextView
-        android:id="@+id/textView3R"
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="200dp"
-        android:background="#40FFFFFF"
-        android:textSize="16dp"
-        android:text="Kaupunki"/>
 
 
     <TextView
@@ -63,89 +31,10 @@
         android:textSize="16dp"
         android:text="Salasana"/>
 
-    <TextView
-        android:id="@+id/textView6R"
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="350dp"
-        android:background="#40FFFFFF"
-        android:textSize="16dp"
-        android:text="Salasana uudelleen"/>
-
-    <TextView
-        android:id="@+id/textView7R"
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="400dp"
-        android:background="#40FFFFFF"
-        android:textSize="16dp"
-        android:text="Pituus"/>
-
-    <TextView
-        android:id="@+id/textView8R"
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="450dp"
-        android:background="#40FFFFFF"
-        android:textSize="16dp"
-        android:text="Paino"/>
-
-    <TextView
-        android:id="@+id/textView9R"
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="500dp"
-        android:background="#40FFFFFF"
-        android:textSize="16dp"
-        android:text="Syntymäaika"/>
-    <TextView
-        android:id="@+id/textView10R"
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="550dp"
-        android:background="#40FFFFFF"
-        android:textSize="16dp"
-        android:text="Sukupuoli"/>
 
 
-    <EditText
-        android:id="@+id/editTextAccountR"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="200dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:background="#40FFFFFF" />
 
-    <EditText
-        android:id="@+id/editTextAgeR"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="150dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:background="#40FFFFFF" />
-    <EditText
-        android:id="@+id/editTextCityR"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="200dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:background="#40FFFFFF" />
+
     <EditText
         android:id="@+id/editTextEmailR"
         android:layout_width="140dp"
@@ -164,51 +53,7 @@
         android:ems="10"
         android:inputType="textPassword"
         android:background="#40FFFFFF" />
-    <EditText
-        android:id="@+id/editTextPasswordAgainR"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="200dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:background="#40FFFFFF" />
-    <EditText
-        android:id="@+id/editTextHeightR"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="200dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:background="#40FFFFFF" />
-    <EditText
-        android:id="@+id/editTextWeightR"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
-        android:layout_marginLeft="200dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:background="#40FFFFFF" />
-    <EditText
-        android:id="@+id/editTextBirthR"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:layout_marginLeft="200dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:background="#40FFFFFF" />
-    <EditText
-        android:id="@+id/editTextSexR"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="200dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:background="#40FFFFFF" />
+
 
     <Button
         android:id="@+id/signup"

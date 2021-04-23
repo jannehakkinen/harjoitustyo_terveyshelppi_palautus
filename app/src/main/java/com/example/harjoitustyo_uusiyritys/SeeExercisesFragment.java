@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -44,7 +45,7 @@ public class SeeExercisesFragment extends Fragment {
         buttonExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textviewExercise.setText("TÄMÄ TOIMI");
+
 
                 try{
                     FileInputStream data = getActivity().openFileInput(sFile);
@@ -52,13 +53,13 @@ public class SeeExercisesFragment extends Fragment {
                     sAllLines = "";
                     while ((sLine = br.readLine()) != null){
                         sAllLines = sAllLines + sLine + "\n";
-                        System.out.println("TÄHÄN ASTI");
+
                     }
                     textviewExercise.setText(sAllLines);
                 } catch (IOException e) {
                     Log.e("IOException", "Virhe syötteessä");
                 } finally {
-                    System.out.println("KIRJOITETTU");
+
                 }
 
             }

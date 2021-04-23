@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,39 +17,46 @@ public class UserFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        System.out.println("moi käyttäjäHomeFragment");
         return inflater.inflate(R.layout.fragment_user, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        TextView text = view.findViewById(R.id.editTextAccount);
-        TextView text2 = view.findViewById(R.id.editTextAge);
-        TextView text3 = view.findViewById(R.id.editTextCity);
-        TextView text4 = view.findViewById(R.id.editTextEmail);
-        TextView text5 = view.findViewById(R.id.editTextPassword);
-        TextView text6 = view.findViewById(R.id.editTextPasswordAgain);
-        TextView text7 = view.findViewById(R.id.editTextHeight);
-        TextView text8 = view.findViewById(R.id.editTextWeight);
-        TextView text9 = view.findViewById(R.id.editTextBirth);
+        EditText editTextAccount = view.findViewById(R.id.editTextAccount);
+        EditText editTextAge = view.findViewById(R.id.editTextAge);
+        EditText editTextCity = view.findViewById(R.id.editTextCity);
+        EditText editTextEmail = view.findViewById(R.id.editTextEmail);
+        EditText editTextPassword = view.findViewById(R.id.editTextPassword);
+        EditText editTextPasswordAgain = view.findViewById(R.id.editTextPasswordAgain);
+        EditText editTextHeight = view.findViewById(R.id.editTextHeight);
+        EditText editTextWeight = view.findViewById(R.id.editTextWeight);
+        EditText editTextBirth = view.findViewById(R.id.editTextBirth);
+        //EditText editTextSex = view.findViewById(R.id.editTextSex);
+        Switch switchSex = view.findViewById(R.id.switchSex);
 
         try {
             String[] arg = getArguments().getStringArray("userinfo");
             System.out.println(arg[0]); //account
-            text.setText(arg[0]);
-            text2.setText(arg[1]);
-            text3.setText(arg[2]);
-            text4.setText(arg[3]);
-            text5.setText(arg[4]);
-            text6.setText(arg[4]);
-            text7.setText(arg[5]);
-            text8.setText(arg[6]);
-            text9.setText(arg[7]);
+            editTextAccount.setText(arg[0]);
+            editTextAge.setText(arg[1]);
+            editTextCity.setText(arg[2]);
+            editTextEmail.setText(arg[3]);
+            //editTextPassword.setText(arg[4]);
+            //editTextPasswordAgain.setText(arg[4]);
+            editTextHeight.setText(arg[5]);
+            editTextWeight.setText(arg[6]);
+            editTextBirth.setText(arg[7]);
+            //editTextSex.setText(arg[8]);
+            if(Boolean.parseBoolean(arg[8]) == true) {
+                switchSex.setChecked(true);
+            }else{
+                switchSex.setChecked(false);
+            }
 
         } catch (NullPointerException e) {
 
-            text.setText("ei käyttäjätietoja");
+            editTextEmail.setText("ei käyttäjätietoja");
         }
     }
 }

@@ -51,19 +51,19 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         String password = editTextPassword.getText().toString().trim();
 
         if(email.isEmpty()){
-            editTextEmail.setError("Email is required");
+            editTextEmail.setError("Sähköposti tarvitaan");
             editTextEmail.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Please enter a valid email");
+            editTextEmail.setError("Syötä sähköposti oikeassa muodossa");
             editTextEmail.requestFocus();
             return;
         }
 
         if(password.isEmpty()){
-            editTextPassword.setError("Password is required");
+            editTextPassword.setError("Salasana tarvitaan");
             editTextPassword.requestFocus();
             return;
         }

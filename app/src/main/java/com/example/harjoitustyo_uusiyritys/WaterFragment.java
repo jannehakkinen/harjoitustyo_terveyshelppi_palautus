@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,7 +39,6 @@ public class WaterFragment extends Fragment implements View.OnClickListener{
         spinnerAmount = view.findViewById(R.id.spinnerWater);
         spinnerUnit = view.findViewById(R.id.spinnerUnit);
         waterGoal = (EditText) view.findViewById(R.id.inputWaterGoal);
-        textViewWater = (TextView) view.findViewById(R.id.textViewPrintWater);
         setSpinnerWater();
         setSpinnerUnit();
 
@@ -96,11 +96,13 @@ public class WaterFragment extends Fragment implements View.OnClickListener{
             if (waterUnit == 0) {
                 float WaterAmountinL = waterAmount / 4;
                 System.out.println(WaterAmountinL);
-                waterconsumption.addWaterToday(WaterAmountinL, iWaterGoal, textViewWater);
+                Toast.makeText(getActivity().getApplicationContext(), waterconsumption.addWaterToday(WaterAmountinL, iWaterGoal, textViewWater), Toast.LENGTH_LONG).show();
             } else if (waterUnit == 1) {
-                waterconsumption.addWaterToday(waterAmount, iWaterGoal, textViewWater);
+
+                Toast.makeText(getActivity().getApplicationContext(), waterconsumption.addWaterToday(waterAmount, iWaterGoal, textViewWater), Toast.LENGTH_LONG).show();
             }
         } catch (NumberFormatException e) {
+            waterGoal.setError("Luku ei kelpaa");
 
         }
 

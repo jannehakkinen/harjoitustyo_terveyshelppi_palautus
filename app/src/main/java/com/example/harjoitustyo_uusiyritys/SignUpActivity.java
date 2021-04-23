@@ -45,42 +45,17 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void registerUser(){
-        EditText editTextAccount = findViewById(R.id.editTextAccountR);
-        EditText editTextAge = findViewById(R.id.editTextAgeR);
-        EditText editTextCity = findViewById(R.id.editTextCityR);
+
         EditText editTextEmail = findViewById(R.id.editTextEmailR);
         EditText editTextPassword = findViewById(R.id.editTextPasswordR);
-        EditText editTextPasswordAgain = findViewById(R.id.editTextPasswordAgainR);
-        EditText editTextHeight = findViewById(R.id.editTextHeightR);
-        EditText editTextWeight = findViewById(R.id.editTextWeightR);
-        EditText editTextBirth = findViewById(R.id.editTextBirthR);
-        EditText editTextSex = findViewById(R.id.editTextSexR);
-        String sAccount = editTextAccount.getText().toString();
-        String sCity = editTextCity.getText().toString();
+
+
         String sEmail = editTextEmail.getText().toString();
         String sPassword = editTextPassword.getText().toString();
-        int iAge = 0;
-        float fWeight = 0;
-        int iHeight = 0;
-        String sPasswordAgain = editTextPasswordAgain.getText().toString();
-        String sBirthday = editTextBirth.getText().toString();
-        String sSex = editTextSex.getText().toString();
 
         PasswordValid ps = new PasswordValid();
-        if (sAccount.equals("")) {
-            editTextAccount.setError("Käyttäjätunnus ei kelpaa");
-            return;
-        }
-        try {
-            iAge = Integer.parseInt(editTextAge.getText().toString());
-        }catch (NumberFormatException e) {
-            editTextAccount.setError("Anna ikä numerona");
-            return;
-        }
-        if (sCity.equals("")) {
-            editTextCity.setError("Kaupunki ei kelpaa");
-            return;
-        }
+
+
         if(!Patterns.EMAIL_ADDRESS.matcher(sEmail).matches()) {
             editTextEmail.setError("Sähköposti ei kelpaa");
             return;
@@ -89,29 +64,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             editTextPassword.setError("Salasana ei kelpaa");
             return;
         }
-        if (!sPassword.equals(sPasswordAgain)) {
-            editTextPasswordAgain.setError("Salasanat eivät ole samanlaiset");
-            return;
-        }
-        try {
-            iHeight = Integer.parseInt(editTextHeight.getText().toString());
-        }catch (NumberFormatException e) {
-            editTextHeight.setError("Anna pituus numerona");
-            return;
-        }
-        try {
-            fWeight = Float.parseFloat(editTextWeight.getText().toString());
-        }catch (NumberFormatException e) {
-            editTextWeight.setError("Anna paino numerona");
-            return;
-        }
-
-        if (sBirthday.equals("")){
-            editTextBirth.setError("Syntymäaika ei kelpaa");
-            return;
-        }
-
-
 
         progressbar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(sEmail, sPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -122,21 +74,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 if(task.isSuccessful()) {
                     Toast toast = Toast.makeText(getApplicationContext(), "Käyttäjän luominen onnistui", Toast.LENGTH_SHORT);
                     toast.show();
-
-                    String user_id = mAuth.getCurrentUser().getUid();
-                    DatabaseReference currentUser = FirebaseDatabase.getInstance().getReference().child("users").child(user_id);
-                    Map newPost = new HashMap();
-                    newPost.put("Account", sAccount);
-                    //newPost.put("age", iAge);
-                    newPost.put("City", sCity);
-                    newPost.put("Email", sEmail);
-                    newPost.put("Password", sPassword);
-                    //newPost.put("Height", iHeight);
-                    //newPost.put("Weight", fWeight);
-                    newPost.put("Birth", sBirthday);
-                    newPost.put("Male", sSex);
-                    currentUser.setValue(newPost);
-
 
                     Intent intent = new Intent (SignUpActivity.this, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
